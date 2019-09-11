@@ -110,6 +110,7 @@ export interface Column<RowData extends object> {
   filtering?: boolean;
   filterPlaceholder?: string;
   filterCellStyle?: React.CSSProperties;
+  fixed?: boolean;
   grouping?: boolean;
   headerStyle?: React.CSSProperties;
   hidden?: boolean;
