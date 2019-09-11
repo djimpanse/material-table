@@ -91,11 +91,17 @@ function (_React$Component) {
       }).map(function (columnDef, index) {
         var value = _this2.props.getFieldValue(_this2.props.data, columnDef);
 
+        var indentStyle = _this2.props.options.indentFirstDataCell && index == 0 ? size === 'medium' ? {
+          paddingLeft: _this2.props.level * 15
+        } : {
+          paddingLeft: 5 + _this2.props.level * 15
+        } : {};
         return React.createElement(_this2.props.components.Cell, {
           size: size,
           icons: _this2.props.icons,
           columnDef: columnDef,
           value: value,
+          style: indentStyle,
           key: "cell-" + _this2.props.data.tableData.id + "-" + columnDef.tableData.id,
           rowData: _this2.props.data
         });
@@ -112,6 +118,11 @@ function (_React$Component) {
       var actions = this.props.actions.filter(function (a) {
         return !a.isFreeAction && !_this3.props.options.selection;
       });
+      var indentStyle = this.props.options.indentActionsCell ? size === 'medium' ? {
+        marginLeft: this.props.level * 15
+      } : {
+        marginLeft: 5 + this.props.level * 15
+      } : {};
       return React.createElement(_TableCell["default"], {
         size: size,
         padding: "none",
@@ -121,9 +132,9 @@ function (_React$Component) {
           padding: '0px 5px'
         }, this.props.options.actionsCellStyle)
       }, React.createElement("div", {
-        style: {
+        style: (0, _objectSpread2["default"])({}, indentStyle, {
           display: 'flex'
-        }
+        })
       }, React.createElement(this.props.components.Actions, {
         data: this.props.data,
         actions: actions,
