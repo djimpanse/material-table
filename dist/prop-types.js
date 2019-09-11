@@ -117,7 +117,7 @@ var propTypes = {
     actionsColumnIndex: _propTypes["default"].number,
     addRowPosition: _propTypes["default"].oneOf(['first', 'last']),
     columnsButton: _propTypes["default"].bool,
-    defaultExpanded: _propTypes["default"].bool,
+    defaultExpanded: _propTypes["default"].bool | _propTypes["default"].func,
     debounceInterval: _propTypes["default"].number,
     detailPanelType: _propTypes["default"].oneOf(['single', 'multiple']),
     doubleHorizontalScroll: _propTypes["default"].bool,
