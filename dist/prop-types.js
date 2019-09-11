@@ -132,6 +132,7 @@ var propTypes = {
     header: _propTypes["default"].bool,
     headerStyle: _propTypes["default"].object,
     initialPage: _propTypes["default"].number,
+    indentFirstDataCell: _propTypes["default"].bool,
     maxBodyHeight: _propTypes["default"].oneOfType([_propTypes["default"].number, _propTypes["default"].string]),
     loadingType: _propTypes["default"].oneOf(['overlay', 'linear']),
     padding: _propTypes["default"].oneOf(['default', 'dense']),
