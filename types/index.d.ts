@@ -199,6 +199,7 @@ export interface Options {
   header?: boolean;
   headerStyle?: React.CSSProperties;
   initialPage?: number;
+  indentFirstDataCell?: boolean;
   loadingType?: ('overlay' | 'linear');
   maxBodyHeight?: number | string;
   padding?: ('default' | 'dense');
